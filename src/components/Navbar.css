@@ -1,0 +1,39 @@
+.navbar-gradient {
+  background: linear-gradient(
+    135deg,
+    #1f2632 0%,
+    #6256f1 35%,
+    #5d9eff 70%,
+    #1f2632 100%
+  );
+  background-size: 300% 300%;
+  animation: navbarGradientShift 14s ease-in-out infinite;
+}
+
+.navbar-gradient::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(circle at 80% 30%, rgba(93, 158, 255, 0.3), transparent 60%);
+  opacity: 0.8;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+
+@keyframes navbarGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
