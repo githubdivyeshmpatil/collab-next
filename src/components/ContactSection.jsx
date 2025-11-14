@@ -4,7 +4,7 @@ import { Mail, Phone, Send } from "lucide-react";
 
 const ContactSection = () => {
   return (
-    <section className="relative bg-gradient-to-br from-indigo-50 via-white to-indigo-100 py-20 px-6 md:px-12 overflow-hidden">
+    <section className="relative bg-linear-to-br from-indigo-50 via-white to-indigo-100 py-20 px-6 md:px-12 overflow-hidden">
       {/* Background Accent Circle */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-200 rounded-full blur-3xl opacity-40 -z-10"></div>
 

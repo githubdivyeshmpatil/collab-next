@@ -1,26 +1,26 @@
 import './App.css'
-import Navbar from './components/Navbar'
-import ContactCenterLayout from './components/ContactCenterLayout'
-import FeaturesSection from './components/FeaturesSection'
-import WorkspacePreviewSection from './components/WorkspacePreviewSection'
-import IntegrationSection from './components/IntegrationSection'
-import CollaborationBenefitsSection from './components/CollaborationBenefitsSection'
-import ContactSection from './components/ContactSection'
-import Footer from './components/Footer'
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Ftp from './pages/Ftp';
+import Ftp_mainpage from './pages/Ftp_mainpage';
+
 function App() {
   return (
     <>
       <Navbar />
-      <ContactCenterLayout />
-      <FeaturesSection />
-      {/* <WorkspacePreviewSection /> */}
-      <IntegrationSection />
-      <CollaborationBenefitsSection />
-     
-      <ContactSection />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ftp" element={<Ftp_mainpage />} />
+
+        {/* Add more pages later */}
+      </Routes>
+
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

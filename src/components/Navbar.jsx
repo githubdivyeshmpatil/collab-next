@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/images/collab_logo.png";
 import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,50 +28,53 @@ const Navbar = () => {
       }`}
     >
       <div className="mx-auto px-6 py-6 flex justify-between items-center">
-        {/* Logo - Left */}
+
+        {/* Logo */}
         <div className="flex items-center space-x-3">
-          <img src={logo} alt="Collab Logo" className="h-12" /> {/* ⬅️ Slightly larger logo */}
+          <img src={logo} alt="Collab Logo" className="h-12" />
           <h1 className="text-2xl font-semibold">Collab.</h1>
         </div>
 
-        {/* Centered Nav Links */}
+        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-10 font-medium text-lg">
-          <a
-            href="#"
+          <Link
+            to="/"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
-           Collaboration
-          </a>
-          <a
-            href="#"
+            Collaboration
+          </Link>
+
+          <Link
+            to="/ftp"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
             FTP
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            to="/remote"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
             Remote
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            to="/workflow"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
             Workflow
-          </a>
-          
+          </Link>
         </div>
 
-        {/* Right Section: Search + Button */}
+        {/* Right Side */}
         <div className="hidden lg:flex items-center space-x-6">
           <Search
             size={22}
@@ -102,46 +106,42 @@ const Navbar = () => {
             isScrolled ? "text-white bg-[#1F2632]" : "text-[#1F2632] bg-white"
           }`}
         >
-          <a
-            href="#"
+          <Link
+            to="/"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
             Home
-          </a>
-          <a
-            href="#"
+          </Link>
+
+          <Link
+            to="/ftp"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
-            About
-          </a>
-          <a
-            href="#"
+            FTP
+          </Link>
+
+          <Link
+            to="/remote"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
-            Services
-          </a>
-          <a
-            href="#"
+            Remote
+          </Link>
+
+          <Link
+            to="/workflow"
             className={`transition ${
               isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
             }`}
           >
-            Projects
-          </a>
-          <a
-            href="#"
-            className={`transition ${
-              isScrolled ? "hover:text-[#5D9EFF]" : "hover:text-[#6256F1]"
-            }`}
-          >
-            Contact
-          </a>
+            Workflow
+          </Link>
+
           <button className="bg-[#6256F1] text-white px-6 py-3 rounded-full font-semibold">
             CONTACT US
           </button>

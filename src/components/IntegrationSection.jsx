@@ -34,7 +34,7 @@ const IntegrationSection = () => {
           {tools.map((tool, i) => (
             <div
               key={i}
-              className="p-4 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center w-32 h-32 flex-shrink-0"
+              className="p-4 bg-gray-50 rounded-2xl hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center w-32 h-32 shrink-0"
             >
               <img
                 src={tool.logo}
